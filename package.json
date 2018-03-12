@@ -30,8 +30,19 @@
     },
     {
       "transpiler": "atom-ts-transpiler",
-      "glob": "{lib,test}/**/*.ts?(x)",
+      "glob": "{lib,test}/**/*.tsx",
       "options": {
+        "compilerOptions": {
+          "module": "commonjs",
+          "moduleResolution": "node",
+          "target": "es6",
+          "noImplicitReturns": true,
+          "noFallthroughCasesInSwitch": true,
+          "noUnusedLocals": true,
+          "sourceMap": true,
+          "jsx": "react",
+          "strict": true
+        },
         "cacheKeyFiles": [
           "package.json",
           "assert-messages-plugin.js",
@@ -55,6 +66,7 @@
     "babel-plugin-transform-object-rest-spread": "^6.20.2",
     "babel-preset-react": "^6.16.0",
     "classnames": "^2.2.5",
+    "codemirror": "^5.35.0",
     "compare-sets": "^1.0.1",
     "core-decorators": "^0.19.0",
     "diff": "3.2.0",
